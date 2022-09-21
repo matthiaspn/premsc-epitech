@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 14</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <form action="#">
+        <label>Text input:
+            <input type="text">
+        </label>
+        <label>Tags:
+            <input type="text">
+        </label>
+        <label>Dropdown:
+            <select id="dropdown">
+                <option value="note">note</option>
+                <option value="email">email</option>
+                <option value="todo_">todo</option>
+            </select>
+        </label>
+        <input type="submit" value="Envoyer">
+    </form>
+    <ul class="creation-form"></ul>
+
+    <form action="#">
+        <label>Word:
+            <input type="text">
+        </label>
+        <label>Types:
+            <select id="types">
+                <option value="nothing">nothing</option>
+                <option value="note">note</option>
+                <option value="email">email</option>
+                <option value="todo_">todo</option>
+            </select>
+        </label>
+        <button>Search</button>
+        <button>Reset</button>
+    </form>
+    <form class="tags-form">
+        <label>Tags (separate tags with space):
+            <input type="text">
+        </label>
+        <button>Search tags</button>
+    </form>
+    Results:
+    <ul class="results"></ul>
+</body>
+</html>

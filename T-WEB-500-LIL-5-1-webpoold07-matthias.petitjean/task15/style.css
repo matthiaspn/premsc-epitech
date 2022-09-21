@@ -1,0 +1,16 @@
+/* Variables */
+.note {
+    border: solid blue;
+}
+
+.email {
+    border: solid green;
+}
+
+.todo_ {
+    border: solid red;
+}
+
+ul.creation-form > li > button {
+    margin-left: 83%;
+}
