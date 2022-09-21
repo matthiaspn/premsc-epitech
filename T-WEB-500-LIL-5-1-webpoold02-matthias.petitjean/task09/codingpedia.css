@@ -1,0 +1,135 @@
+/* Base (previous exercises) */
+html {
+    background-color: grey;
+}
+
+.box {
+    border: 2px solid black;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    flex: 100%;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+
+main {
+    flex-grow: 8;
+}
+
+aside {
+    max-width: 20%;
+}
+
+.moving_square {
+    background-color: red;
+    position: absolute; /* The absolute position is not requested by the subject, but has been set so as not to interfere with the other elements */
+    height: 100px;
+    width: 100px;
+    animation-name: square_moving;
+    animation-iteration-count: 5;
+    animation-duration: 5s;
+}
+
+@keyframes square_moving {
+    0% {
+        transform: translate(0px);
+    }
+    25% {
+        transform: translate(0px, 300px);
+        background-color: green;
+    }
+    50% {
+        transform: translate(300px, 300px);
+        background-color: blue;
+    }
+    75% {
+        transform: translate(300px, 0px);
+        background-color: yellow;
+    }
+    100% {
+        transform: translate(0px);
+        background-color: red;
+    }
+}
+
+/* Form */
+
+label {
+    display: inline-block;
+    width: 50%;
+}
+
+input[type=text], input[type=tel],
+input[type=email], input[type=number] {
+    width: 45%;
+}
+
+textarea {
+    width: 45%;
+}
+
+select {
+    width: 45.5%;
+}
+
+.radio_input label {
+    display: unset;
+    width: unset;
+}
+
+.radio_input label:nth-child(1) {
+    display: inline-block;
+    width: 50%;
+}
+
+input[type=submit] {
+    margin-left: 90.5%;
+    margin-bottom: 1%;
+}
+
+/* Navigation menu */
+nav > ul {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav > ul > li {
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+nav > ul > li > a {
+    color: grey;
+    text-decoration: none;
+}
+
+nav > ul > li:nth-child(1) {
+    background-color: #54b3d6;
+}
+
+nav > ul > li:nth-child(1) > a {
+    color: black;
+    font-weight: 700;
+}
+
+
+/* Footer */
+footer {
+    flex: 100%
+}
+
+footer > address {
+    text-align: center;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodingPedia</title>
+    <link rel="stylesheet" type="text/css" href="codingpedia.css" />
+</head>
+<body>
+    <div class="moving_square"></div>
+    <header class="box">
+        <h1>Welcome to CodingPedia!</h1>
+        <nav class="box">
+            <ul>
+                <li><a href="index.html">Index</a></li>
+                <li><a href="php.html">PHP</a></li>
+                <li><a href="sql.html">SQL</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="box">
+        <p>CodingPedia is a collective encyclopedia project on the Internet aiming to be universal and multi-lingual which functions as a wiki.</p>
+        <p>CodingPedia has for goal to offer freely reusable objective and verifiable content that anyone can modify and improve.</p>
+        <article>
+            <form action="#" method="post">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+                <label for="first-name">First name</label>
+                <input type="text" name="first-name" id="first-name" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <label for="age">Age</label>
+                <input type="number" name="age" id="age" min="3" max="99">
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" id="phone" maxlength="10">
+                <fieldset>
+                    <legend>Sex</legend>
+                    <input type="radio" id="male" name="sex" value="male" checked>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="sex" value="female">
+                    <label for="female">Female</label>
+                </fieldset>
+                <label for="hair">Hair color</label>
+                <input type="color" name="hair" id="hair">
+                <label for="date">Date</label>
+                <input type="date" name="date" id="date" value="2022-09-13" required>
+                <label for="technology">Technology</label>
+                <select id="technology">
+                    <option value="PHP">PHP</option>
+                    <option value="SQL">SQL</option>
+                </select>
+                <label for="question">Question</label>
+                <textarea name="question" id="question" required></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </article>
+    </main>
+    <aside class="box">
+        <p>My name is Matthias PETITJEAN, I am 21 years old and I am a Pre-MSC student at Epitech Lille. My fields of
+            interest in IT are devops and system administration.</p>
+    </aside>
+    <footer class="box">
+        <address>
+            Petitjean Matthias<br>
+            29, Rue Emile Zola 59970 Fresnes-Sur-Escaut, France<br>
+            <a href="tel:+33609832570">+33 (0)6 09 83 25 70</a>
+        </address>
+    </footer>
+</body>
+</html>

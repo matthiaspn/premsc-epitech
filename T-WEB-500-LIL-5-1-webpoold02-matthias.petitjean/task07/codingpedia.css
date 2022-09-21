@@ -1,0 +1,35 @@
+/* Classes */
+html {
+    background-color: grey;
+}
+
+.box {
+    border: 2px solid black;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    flex: 100%;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+
+main {
+    flex-grow: 8;
+}
+
+aside {
+    max-width: 20%;
+}
+
+footer {
+    flex: 100%;
+}

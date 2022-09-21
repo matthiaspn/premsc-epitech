@@ -1,0 +1,67 @@
+/* Classes */
+html {
+    background-color: grey;
+}
+
+.box {
+    border: 2px solid black;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    flex: 100%;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+
+main {
+    flex-grow: 8;
+}
+
+aside {
+    max-width: 20%;
+}
+
+footer {
+    flex: 100%;
+}
+
+.moving_square {
+    background-color: red;
+    position: absolute; /* The absolute position is not requested by the subject, but has been set so as not to interfere with the other elements */
+    height: 100px;
+    width: 100px;
+    animation-name: square_moving;
+    animation-iteration-count: 5;
+    animation-duration: 5s;
+}
+
+@keyframes square_moving {
+    0% {
+        transform: translate(0px);
+    }
+    25% {
+        transform: translate(0px, 300px);
+        background-color: green;
+    }
+    50% {
+        transform: translate(300px, 300px);
+        background-color: blue;
+    }
+    75% {
+        transform: translate(300px, 0px);
+        background-color: yellow;
+    }
+    100% {
+        transform: translate(0px);
+        background-color: red;
+    }
+}
