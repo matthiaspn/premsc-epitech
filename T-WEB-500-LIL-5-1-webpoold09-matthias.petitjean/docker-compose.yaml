@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    image: php:8.0.24RC1-apache
+    container_name: web_pool_day09
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "8100:80"
+    stdin_open: true
+    tty: true
