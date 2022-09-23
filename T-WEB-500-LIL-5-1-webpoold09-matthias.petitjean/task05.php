@@ -1,6 +1,6 @@
 <?php
 function formateCurriculum(string $curriculum): string {
-    $ret = "I'm a student of ";
+    $ret = " I'm a student of ";
 
     switch ($curriculum) {
         case "pge":
@@ -21,18 +21,20 @@ function form_is_submitted(): bool {
 }
 
 function whoami() {
-    $ret = "";
-    if ($_POST["name"] != "" && $_POST["age"] != "") {
-        $ret = "Hi, my name is " . $_POST["name"] . " and I'm " . (int)$_POST["age"] . " years old." . PHP_EOL;
-    } else if ($_POST["name"] != "" && $_POST["age"] == "") {
-        $ret = "Hi, my name is " . $_POST['name'] . "." . PHP_EOL;
-    } else if ($_POST["name"] == "" && $_POST["age"] != "") {
-        $ret = "Hi, I have no name and I'm " . (int)$_POST['age'] . " years old." . PHP_EOL;
-    } else {
-        $ret = "Hi, I have no name." . PHP_EOL;
-    }
+    if (isset($_POST['submit'])) {
+        $ret = "";
+        if (!empty($_POST["name"]) && !empty($_POST["age"])) {
+            $ret = "Hi, my name is " . $_POST["name"] . " and I'm " . (int)$_POST["age"] . " years old.";
+        } else if (!empty($_POST['name']) && empty($_POST['age'])) {
+            $ret = "Hi, my name is " . $_POST['name'] . ".";
+        } else if (empty($_POST['name']) && !empty($_POST['age'])) {
+            $ret = "Hi, I have no name and I'm " . (int)$_POST['age'] . " years old.";
+        } else {
+            $ret = "Hi, I have no name.";
+        }
 
-    if (isset($_POST['submit']))
-        $ret .= formateCurriculum($_POST['curriculum']);
-    echo $ret;
+        if (!empty($_POST['curriculum']))
+            $ret .= formateCurriculum($_POST['curriculum']);
+        echo $ret;
+    }
 }
